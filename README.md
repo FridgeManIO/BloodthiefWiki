@@ -4,4 +4,4 @@ To build the site from source, run `mkdocs serve` for a liveserver, or `mkdocs b
 
 Ensure the link at the top of `mkdocs.yml` points to your hosted server.
 
-Deploy the contents generated inside the "Site" directory to your chosen host.
+Deploys automatically at (https://bloodthiefwikidocs.pages.dev/)
