@@ -14,6 +14,8 @@ theme:
 
 extra:
   social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FridgeManIO/BloodthiefWiki
     - icon: fontawesome/brands/steam
       link: https://store.steampowered.com/app/2533600/Bloodthief/
     - icon: fontawesome/brands/youtube
@@ -30,9 +32,10 @@ nav:
     - Mapping:
         # - Mapping Guide: https://blargis.github.io/bloodthief_docs/mapping-guide #These hard-link to blargis' site. Very dodgy
         # - Entity Reference: https://blargis.github.io/bloodthief_docs/entity-reference
-        - Mapping Guide: mapping-guide.md
-        - Entity Reference: entity-reference.md
+        - Mapping Guide: blarg_docs/docs/mapping-guide.md
+        - Entity Reference: blarg_docs/docs/entity-reference.md
     - Speedrunning Resources: speedrunning.md
+    - Modding: modding.md
     - Lore: lore.md
 
 ###Enables emojis - database here https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/###
