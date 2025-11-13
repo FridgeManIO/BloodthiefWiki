@@ -4,6 +4,8 @@ Modding is currently unofficially supported and is only made possible by the [Bl
 
 Note that the mod loader also supports importing custom textures into [Trenchbroom](https://trenchbroom.github.io/), BloodThief's custom mapping tool.
 
+To disable mods, rename override.cfg to anything else.
+
 ## Where to get mods
 
 The best place for this at present is the [modding discord](https://discord.gg/hpAKq35FJf), but there are mods floating around that you can install. Hopefully a more centralised location can be decided upon once the modding community grows.
@@ -22,7 +24,7 @@ The following are a selection of useful/fun mods that should work with the curre
 
 ## How to create your own mods
 
-Note: To effectively create your own mods, you will want to obtain a copy of the BloodThief source code.
+Note: To effectively create your own mods, you will want to obtain a copy of the BloodThief source code. The technique for this will not be disclosed in this guide.
 
 * Carlosfruitcup's demo docs [Demo Modding Wiki](https://github.com/carlosfruitcup/bloodthief-modding-docs/wiki)
 
@@ -48,7 +50,6 @@ Mods should be packed up as a .zip file, and should contain the following files 
 ```
 
 ```gd title="mod_main.gd"
-
 extends "res://addons/ModLoader/mod_node.gd"
 
 func init():
@@ -86,15 +87,30 @@ func _process(_delta):
 
 In cases where you have to override local variables, or even functions, you will have to override the BloodThief code itself. As a simple example we will use the [zeroLHBloodCost](https://github.com/FridgeManIO/BloodThiefMods/tree/main/fridge-zeroLHBloodCost) mod.
 
-The original code for the scythe looks something like this for the post-nerf scythe:
+The code for the scythe looks something like this post-nerf:
 ```gd title="scythe_interaction_behaviour.gd"
 func can_dash(player: Player):
-    return player.blood_amount >= DASH_BLOOD_COST and _can_dash and not _dash_on_cooldown and !player.is_on_floor() and player.on_ground_ray.get_collider() == null
+    return player.blood_amount >= 0.3 and _can_dash and not _dash_on_cooldown and !player.is_on_floor() and player.on_ground_ray.get_collider() == null
+```
+Pre-nerf, the scythe (life harvester) did not have a blood cost denoted by `player.blood_amount >= 0.3`. In this case, one solution to revert this nerf would be to overwrite this function like so:
+```gd title="scythe_interaction_behaviour_override.gd"
+extends "res://scripts/components/scythe_interaction_behavior.gd"
+
+func can_dash(player: Player):
+    return _can_dash and not _dash_on_cooldown and !player.is_on_floor() and player.on_ground_ray.get_collider() == null
 ```
 
+The `extends` path denotes the location of the script in the BloodThief source code to be overwritten. Only this function will be changed.
 
+To actually overwrite this function, some extra code is required in main.gd
+```gd title="main.gd"
+extends "res://addons/ModLoader/mod_node.gd"
 
-
+func init():
+	ModLoader.mod_log(name_pretty + " mod loaded")
+	var scythe_interaction_behaviour_override = load(path_to_dir+"/scythe_interaction_behaviour_override.gd")
+	scythe_interaction_behaviour_override.take_over_path("res://scripts/components/scythe_interaction_behavior.gd")
+```
 
 ### Custom Scenes Example
 * Under construction
