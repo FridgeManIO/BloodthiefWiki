@@ -1,0 +1,57 @@
+site_name: Bloodthief Wiki
+site_url: http://bloodthiefwiki.pages.dev
+theme:
+    name: material
+    palette:
+        #Dark Mode
+        scheme: slate
+        primary: red
+        accent: orange
+    features:
+        - navigation.footer
+    logo: assets/logo.png
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/steam
+      link: https://store.steampowered.com/app/2533600/Bloodthief/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@Blargis3d
+    - icon: fontawesome/brands/discord
+# copyright: Copyright &copy; Date Name (change footer info in mkdocs.yml)
+
+plugins:
+    - search
+    - social
+
+nav:
+    - Home: index.md
+    - Mapping:
+        - Mapping Guide: mapping-guide.md
+        - Entity Reference: entity-reference.md
+    - Speedrunning Resources: speedrunning.md
+    - Lore: lore.md
+
+###Enables emojis - database here https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/###
+markdown_extensions:
+    - attr_list
+    - pymdownx.emoji:
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
+          emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+###Enables syntax highlighting for codeblocks###
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+###Enables "admonitions"###
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
