@@ -25,6 +25,7 @@ extra:
     - icon: fontawesome/brands/twitch
       link: https://www.twitch.tv/blargisdev
     - icon: fontawesome/brands/discord
+      link: https://discord.gg/aU5naj2fgY
 # copyright: Copyright &copy; Date Name (change footer info in mkdocs.yml)
 
 plugins:
