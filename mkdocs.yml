@@ -12,7 +12,7 @@ theme:
         - navigation.instant
         - navigation.prefetch
     logo: assets/logo.png
-
+    favicon: assets/icon.ico
 
 extra:
   social:
@@ -22,6 +22,8 @@ extra:
       link: https://store.steampowered.com/app/2533600/Bloodthief/
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/@Blargis3d
+    - icon: fontawesome/brands/twitch
+      link: https://www.twitch.tv/blargisdev
     - icon: fontawesome/brands/discord
 # copyright: Copyright &copy; Date Name (change footer info in mkdocs.yml)
 
