@@ -28,8 +28,8 @@ plugins:
 nav:
     - Home: index.md
     - Mapping:
-        - Mapping Guide: mapping-guide.md
-        - Entity Reference: entity-reference.md
+        - Mapping Guide: blarg_docs/docs/mapping-guide.md
+        - Entity Reference: _entity-reference.md
     - Speedrunning Resources: speedrunning.md
     - Lore: lore.md
 

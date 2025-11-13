@@ -7,7 +7,7 @@ This guide is meant to be used like a wiki for you to reference for all your map
 * [Example Map - Time Tomb](https://drive.google.com/file/d/1ug1_SbQ-79RKrOdk9USPT0Q1SCSGNpa7/view?usp=drive_link)
 * [Trenchbroom Manual](https://trenchbroom.github.io/manual/latest/)
 * [Dumptruck_ds Trenchbroom Tutorial Series](https://www.youtube.com/watch?v=gONePWocbqA&list=PLgDKRPte5Y0AZ_K_PZbWbgBAEt5xf74aE&index=1)
-* [Entity Reference](entity-reference.md)
+* [Entity Reference](/entity-reference)
 
 ## Pro Tips
 ### Clip Textures and Water
