@@ -9,6 +9,8 @@ theme:
         accent: orange
     features:
         - navigation.footer
+        - navigation.instant
+        - navigation.prefetch
     logo: assets/logo.png
 
 
@@ -28,10 +30,8 @@ plugins:
 nav:
     - Home: index.md
     - Mapping:
-        # - Mapping Guide: https://blargis.github.io/bloodthief_docs/mapping-guide #These hard-link to blargis' site. Very dodgy
-        # - Entity Reference: https://blargis.github.io/bloodthief_docs/entity-reference
-        - Mapping Guide: mapping-guide.md
-        - Entity Reference: entity-reference.md
+        - Mapping Guide: blarg_docs/docs/mapping-guide.md #These hard-link to blargis' site. Very dodgy
+        - Entity Reference: blarg_docs/docs/entity-reference.md
     - Speedrunning Resources: speedrunning.md
     - Lore: lore.md
 
