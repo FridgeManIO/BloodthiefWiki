@@ -1,0 +1,3 @@
+[submodule "docs/blarg_docs"]
+	path = docs/blarg_docs
+	url = https://github.com/blargis/bloodthief_docs.git

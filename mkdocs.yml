@@ -9,6 +9,8 @@ theme:
         accent: orange
     features:
         - navigation.footer
+        - navigation.instant
+        - navigation.prefetch
     logo: assets/logo.png
 
 
