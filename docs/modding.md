@@ -117,3 +117,7 @@ func init():
 
 ### External Plugins Example
 * Under construction
+
+## Where do I publish my mods?
+
+The current default place is the [modding discord](https://discord.gg/hpAKq35FJf) in the mods channel, but this is subject to change.
