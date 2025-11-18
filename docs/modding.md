@@ -1,10 +1,11 @@
 # Modding
 
-Modding is currently unofficially supported and is only made possible by the [BloodThief Mod Loader](https://github.com/olvior/bloodthief-mod-loader) by Olvior. It was initially developed for the demo, but it works just fine with the full game. Functions on both Windows and Linux.
+Modding is currently unofficially supported and is made possible with the [BloodThief Mod Loader](https://github.com/olvior/bloodthief-mod-loader) by Olvior. It was initially developed for the demo, but it works just fine with the full game. Functions on both Windows and Linux.
 
-Note that the mod loader also supports importing custom textures into [Trenchbroom](https://trenchbroom.github.io/), BloodThief's custom mapping tool.
+The mod loader also supports importing custom textures into [Trenchbroom](https://trenchbroom.github.io/), BloodThief's custom mapping tool of choice. Learn more in the modloader readme.
 
-To disable mods, rename override.cfg to anything else.
+!!!tip
+    To disable mods, rename override.cfg to anything else. You can find it alongside the Bloodthief executable.
 
 ## Where to get mods
 
@@ -24,15 +25,12 @@ The following are a selection of useful/fun mods that should work with the curre
 
 ## How to create your own mods
 
-Note: To effectively create your own mods, you will want to obtain a copy of the BloodThief source code. The technique for this will not be disclosed in this guide.
+!!!info
+    To effectively create your own mods, you will want to obtain a copy of the BloodThief source code. The technique for this will not be disclosed in this guide.
 
-* Carlosfruitcup's demo docs [Demo Modding Wiki](https://github.com/carlosfruitcup/bloodthief-modding-docs/wiki)
+Mods should be packed up as a .zip file, and should contain the following two files as a minimum.
 
-* Olivor's mod loader [readme](https://github.com/olvior/bloodthief-mod-loader?tab=readme-ov-file#how-to-create-a-mod)
-
-Mods should be packed up as a .zip file, and should contain the following files as a minimum.
-
-### Minimum Example
+### Minimal Example
 
 ``` json title="manifest.json"
 {
@@ -92,7 +90,7 @@ The code for the scythe looks something like this post-nerf:
 func can_dash(player: Player):
     return player.blood_amount >= 0.3 and _can_dash and not _dash_on_cooldown and !player.is_on_floor() and player.on_ground_ray.get_collider() == null
 ```
-Pre-nerf, the scythe (life harvester) did not have a blood cost denoted by `player.blood_amount >= 0.3`. In this case, one solution to revert this nerf would be to overwrite this function like so:
+Pre-nerf, the scythe (life harvester) did not have the blood cost shown as `player.blood_amount >= 0.3`. In this case, one solution to revert this nerf would be to overwrite this function like so:
 ```gd title="scythe_interaction_behaviour_override.gd"
 extends "res://scripts/components/scythe_interaction_behavior.gd"
 
@@ -100,7 +98,9 @@ func can_dash(player: Player):
     return _can_dash and not _dash_on_cooldown and !player.is_on_floor() and player.on_ground_ray.get_collider() == null
 ```
 
-The `extends` path denotes the location of the script in the BloodThief source code to be overwritten. Only this function will be changed.
+By overwriting this script in this way, we completely remove the player blood check, leaving everything else in the function intact.
+
+The `extends` path denotes the location of the script in the BloodThief source code to be overwritten. Only this function will be changed, leaving the rest of the file intact.
 
 To actually overwrite this function, some extra code is required in main.gd
 ```gd title="main.gd"
@@ -112,11 +112,22 @@ func init():
 	scythe_interaction_behaviour_override.take_over_path("res://scripts/components/scythe_interaction_behavior.gd")
 ```
 
+!!!warning
+    Only change what you need, and try your best not to lazily include whole files in your overrides. This keeps file sizes small and shouldn't attract copyright infringement fairies.
+
 ### Custom Scenes Example
 * Under construction
 
 ### External Plugins Example
 * Under construction
+
+The best way to learn is to inspect the mods of others and to dive into your own projects. If you have any questions, just pop into the Bloodthief modding server.
+
+### External Mod-Making Resources
+
+* Olivor's mod loader [readme](https://github.com/olvior/bloodthief-mod-loader?tab=readme-ov-file#how-to-create-a-mod)
+
+* Carlosfruitcup's demo docs [Demo Modding Wiki](https://github.com/carlosfruitcup/bloodthief-modding-docs/wiki)
 
 ## Where do I publish my mods?
 
