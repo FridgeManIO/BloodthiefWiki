@@ -1,18 +1,18 @@
 site_name: Bloodthief Wiki
 site_url: https://bloodthiefwikidocs.pages.dev/
 theme:
-    name: material
-    palette:
-        #Dark Mode
-        scheme: slate
-        primary: red
-        accent: orange
-    features:
-        - navigation.footer
-        - navigation.instant
-        - navigation.prefetch
-    logo: assets/logo.png
-    favicon: assets/icon.ico
+  name: material
+  palette:
+    #Dark Mode
+    scheme: slate
+    primary: red
+    accent: orange
+  features:
+    - navigation.footer
+    - navigation.instant
+    - navigation.prefetch
+  logo: assets/logo.png
+  favicon: assets/icon.ico
 
 extra:
   social:
@@ -29,30 +29,26 @@ extra:
 # copyright: Copyright &copy; Date Name (change footer info in mkdocs.yml)
 
 plugins:
-    - search
-    - social
+  - search
+  - social
 
 nav:
-    - Home: index.md
-    - Modding: modding.md
-    - Mapping:
-        # - Mapping Guide: https://blargis.github.io/bloodthief_docs/mapping-guide #These hard-link to blargis' site. Very dodgy
-        # - Entity Reference: https://blargis.github.io/bloodthief_docs/entity-reference
-        - Mapping Guide: blarg_docs/docs/mapping-guide.md
-        - Entity Reference: blarg_docs/docs/entity-reference.md
-    - Coming Eventually:
-        - Speedrunning Resources: speedrunning.md
-        - Lore: lore.md
+  - Home: index.md
+  - Modding: modding.md
+  - Mapping:
+      - Mapping Home: blarg_docs/docs/index.md
+      - Mapping Guide: blarg_docs/docs/mapping-guide.md
+      - Entity Reference: blarg_docs/docs/entity-reference.md
+  - Coming Eventually:
+      - Speedrunning Resources: speedrunning.md
+      - Lore: lore.md
 
 ###Enables emojis - database here https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/###
 markdown_extensions:
-    - attr_list
-    - pymdownx.emoji:
-          emoji_index: !!python/name:material.extensions.emoji.twemoji
-          emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
-###Enables syntax highlighting for codeblocks###
-markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -60,9 +56,9 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-
-###Enables "admonitions"##
-markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
