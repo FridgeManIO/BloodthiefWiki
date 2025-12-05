@@ -35,7 +35,7 @@ plugins:
 nav:
     - Home: index.md
     - Modding: modding.md
-    - Speedrunning Resources: speedrunning.md
+    - Speedrunning: speedrunning.md
     - Mapping:
           - Mapping Home: blarg_docs/docs/index.md
           - Mapping Guide: blarg_docs/docs/mapping-guide.md
