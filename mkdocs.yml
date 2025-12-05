@@ -1,64 +1,64 @@
 site_name: Bloodthief Wiki
 site_url: https://bloodthiefwikidocs.pages.dev/
 theme:
-  name: material
-  palette:
-    #Dark Mode
-    scheme: slate
-    primary: red
-    accent: orange
-  features:
-    - navigation.footer
-    - navigation.instant
-    - navigation.prefetch
-  logo: assets/logo.png
-  favicon: assets/icon.ico
+    name: material
+    palette:
+        #Dark Mode
+        scheme: slate
+        primary: red
+        accent: orange
+    features:
+        - navigation.footer
+        - navigation.instant
+        - navigation.prefetch
+    logo: assets/logo.png
+    favicon: assets/icon.ico
 
 extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/FridgeManIO/BloodthiefWiki
-    - icon: fontawesome/brands/steam
-      link: https://store.steampowered.com/app/2533600/Bloodthief/
-    - icon: fontawesome/brands/youtube
-      link: https://www.youtube.com/@Blargis3d
-    - icon: fontawesome/brands/twitch
-      link: https://www.twitch.tv/blargisdev
-    - icon: fontawesome/brands/discord
-      link: https://discord.gg/aU5naj2fgY
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/FridgeManIO/BloodthiefWiki
+        - icon: fontawesome/brands/steam
+          link: https://store.steampowered.com/app/2533600/Bloodthief/
+        - icon: fontawesome/brands/youtube
+          link: https://www.youtube.com/@Blargis3d
+        - icon: fontawesome/brands/twitch
+          link: https://www.twitch.tv/blargisdev
+        - icon: fontawesome/brands/discord
+          link: https://discord.gg/aU5naj2fgY
 # copyright: Copyright &copy; Date Name (change footer info in mkdocs.yml)
 
 plugins:
-  - search
-  - social
+    - search
+    - social
 
 nav:
-  - Home: index.md
-  - Modding: modding.md
-  - Mapping:
-      - Mapping Home: blarg_docs/docs/index.md
-      - Mapping Guide: blarg_docs/docs/mapping-guide.md
-      - Entity Reference: blarg_docs/docs/entity-reference.md
-  - Coming Eventually:
-      - Speedrunning Resources: speedrunning.md
-      - Lore: lore.md
+    - Home: index.md
+    - Modding: modding.md
+    - Speedrunning Resources: speedrunning.md
+    - Mapping:
+          - Mapping Home: blarg_docs/docs/index.md
+          - Mapping Guide: blarg_docs/docs/mapping-guide.md
+          - Entity Reference: blarg_docs/docs/entity-reference.md
+    - Coming Eventually:
+          - Lore: lore.md
 
 ###Enables emojis - database here https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/###
 markdown_extensions:
-  - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
+    - attr_list
+    - pymdownx.emoji:
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
+          emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - pymdownx.caret
+    - pymdownx.mark
+    - pymdownx.tilde
