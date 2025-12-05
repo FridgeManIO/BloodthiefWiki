@@ -16,3 +16,10 @@ Get started with modding with [modding-guide](modding.md)
 <br><br>
 <iframe src="https://store.steampowered.com/widget/2533600/" frameborder="0" width="646" height="190"></iframe>
 </p>
+
+<!--Contributor display - add this block below when contributors exist-->
+<!--<a href="https://github.com/FridgeManIO/BloodthiefWiki/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=FridgeManIO/BloodthiefWiki" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).-->
