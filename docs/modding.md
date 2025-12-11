@@ -112,8 +112,11 @@ func init():
 	scythe_interaction_behaviour_override.take_over_path("res://scripts/components/scythe_interaction_behavior.gd")
 ```
 
-!!!warning
+!!!tip
     Only change what you need, and try your best not to lazily include whole files in your overrides. This keeps file sizes small and shouldn't attract copyright infringement fairies.
+
+!!!warning
+    At the moment if a source file contains a class_name, that file cannot be over-ridden. [This is due to a bug in the godot engine from 4.x onwards.](https://github.com/godotengine/godot/issues/83542)
 
 ### Custom Scenes Example
 * Under construction
