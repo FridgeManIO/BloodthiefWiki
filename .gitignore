@@ -1,3 +1,4 @@
 .zed/ls-commands.txt
 site/
 .cache/
+.zed/mkgame.py
