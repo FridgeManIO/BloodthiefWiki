@@ -27,6 +27,9 @@ extra:
           link: https://www.twitch.tv/blargisdev
         - icon: fontawesome/brands/discord
           link: https://discord.gg/aU5naj2fgY
+        - icon: fontawesome/solid/trophy
+          link: https://www.speedrun.com/Bloodthief
+
 # copyright: Copyright &copy; Date Name (change footer info in mkdocs.yml)
 
 plugins:
