@@ -43,6 +43,24 @@ nav:
           - Entity Reference: blarg_docs/docs/entity-reference.md
     - Artifacts [WIP]:
           - artifacts/weapons/sires_blade.md
+          - artifacts/weapons/stone_sword.md
+          - artifacts/weapons/glurms_club.md
+          - artifacts/weapons/toothpick.md
+          - artifacts/weapons/sliver_of_darkness.md
+          - artifacts/weapons/weeping_blade.md
+          - artifacts/weapons/dawnblade.md
+          - artifacts/weapons/combobulator.md
+          - artifacts/weapons/chastiser.md
+          - artifacts/weapons/humility.md
+          - artifacts/weapons/blood_sapper.md
+          - artifacts/weapons/silken_edge.md
+          - artifacts/weapons/savager.md
+          - artifacts/weapons/coldbringer.md
+          - artifacts/weapons/mailas_kiss.md
+          - artifacts/weapons/skrike.md
+          - artifacts/weapons/life_harvester.md
+          - artifacts/weapons/godsteel.md
+          - artifacts/weapons/godslayer.md
     - Campaign Levels [WIP]:
           - (1-1) Varu Underbelly: campaign_levels/1-1.md
           - (1-2) Varu Rooftops: campaign_levels/1-2.md
