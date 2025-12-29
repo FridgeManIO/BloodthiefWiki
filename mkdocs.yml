@@ -98,6 +98,7 @@ nav:
           - (SR1) Stone Realms 1: campaign_levels/SR1.md
           - (SR2) Stone Realms 2: campaign_levels/SR2.md
           - (SR3) Stone Realms 3: campaign_levels/SR3.md
+    - Contributing: contributing.md
 
 ###Enables emojis - database here https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/###
 markdown_extensions:

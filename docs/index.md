@@ -1,6 +1,6 @@
-# Welcome to the Bloodthief Wiki
+# Welcome to the Unofficial Bloodthief Wiki
 
-WIP Bloodthief Wiki & Documentation. Not currently open for contributions, but will be soon.
+WIP Bloodthief Wiki & Documentation. See how to contribute [here](contributing.md)!
 
 Bloodthief is an ultra-fast melee dungeon-runner where you use momentum to parkour through hazardous dungeons and brutally slash through enemies. Speed-run through haunted crypts and castles and learn what dark secrets lie beneath
 
